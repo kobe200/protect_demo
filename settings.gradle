@@ -1,0 +1,4 @@
+include ':music_library', ':media_test', ':music_library_client', ':video_library', ':image_library', ':extend_music', ':video_library_client', ':extend_video', ':Cookoousbmediadatalib',
+        ':extend_image', ':image_library_client'
+
+

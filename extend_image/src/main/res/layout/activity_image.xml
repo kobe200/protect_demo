@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <com.cookoo.extendimage.MyViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="300px"
+            android:background="#66333333"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_controller"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF">
+
+                    <Button
+                        android:id="@+id/btn_preimage"
+                        style="@style/TextCfg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="上一个"/>
+
+                    <Button
+                        android:id="@+id/btn_playorpause"
+                        style="@style/TextCfg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="播放/暂停"/>
+
+                    <Button
+                        android:id="@+id/btn_nextimage"
+                        style="@style/TextCfg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="下一个"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_controller2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF">
+
+                    <Button
+                        android:id="@+id/btn_zoom_out"
+                        style="@style/TextCfg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="缩小"/>
+
+                    <Button
+                        android:id="@+id/btn_zoom_in"
+                        style="@style/TextCfg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="放大"/>
+
+                    <Button
+                        android:id="@+id/btn_rotate"
+                        style="@style/TextCfg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="旋转"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/control1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_list_all"
+                        style="@style/TextCfg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="全部数据列表"/>
+
+                    <Button
+                        android:id="@+id/btn_playlist_collected"
+                        style="@style/TextCfg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="收藏列表"/>
+
+                    <Button
+                        android:id="@+id/btn_two_class_folder"
+                        style="@style/TextCfg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="两级文件夹"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/control2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_multiple_class_folder"
+                        style="@style/TextCfg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="多级文件夹"/>
+
+                    <Button
+                        android:id="@+id/btn_back"
+                        style="@style/TextCfg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="返回上一级目录"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/control3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_exit"
+                        style="@style/TextCfg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="退出"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#33333333"
+            android:orientation="vertical"
+            android:paddingLeft="5sp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="标题:"/>
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    style="@style/TextCfg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="start"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="列表总数|位置:"/>
+
+                <TextView
+                    android:id="@+id/play_list_count"
+                    style="@style/TextCfg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="播放状态："/>
+
+                <TextView
+                    android:id="@+id/tv_playstate"
+                    style="@style/TextCfg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="数据类型："/>
+
+                <TextView
+                    android:id="@+id/list_data_type"
+                    style="@style/TextCfg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="start"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="播放目录："/>
+
+                <TextView
+                    android:id="@+id/list_play_path"
+                    style="@style/TextCfg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="start"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="浏览目录："/>
+
+                <TextView
+                    android:id="@+id/list_folder_path"
+                    style="@style/TextCfg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="start"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="usb扫描状态："/>
+
+                <TextView
+                    android:id="@+id/usbScanState"
+                    style="@style/TextCfg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/playlist"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/playListItemBg_normal"/>
+    </LinearLayout>
+</LinearLayout>

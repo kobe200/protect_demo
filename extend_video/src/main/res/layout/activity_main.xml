@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_playlist_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="50px"
+        android:text="全部数据列表" />
+
+    <Button
+        android:id="@+id/btn_two_class_folder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/btn_playlist_all"
+        android:textSize="12sp"
+        android:text="两级文件夹" />
+
+    <Button
+        android:id="@+id/btn_multiple_class_folder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/btn_two_class_folder"
+        android:textSize="12sp"
+        android:text="多级文件夹" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/btn_multiple_class_folder"
+        android:textSize="12sp"
+        android:text="返回" />
+
+    <ListView
+        android:id="@+id/playlist"
+        android:background="#55333333"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btn_playlist_all"
+        />
+
+</RelativeLayout>

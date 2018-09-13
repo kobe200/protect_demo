@@ -1,0 +1,22 @@
+对于收音机目前接口统一化管理，接口主要分为以下几部份：
+ RadioManager供集成方直接调用的API     RadioManagerAPI.java
+ Observer回调接口    RadioTool.java
+
+
+ AIDL:
+ AIDL远程调用接口  IRadioService.aidl
+ AIDL客户端回调接口  RadioServiceCallback.aidl
+
+
+ 收音机模块统一接口  IRadioModule.java
+ RadioManager --> 收音机模块
+
+
+ RadioManager中的API 以及RadioTool 的接口需与AIDL的接口一致，除设置回调监听外 ,如AIDL意外断开
+
+
+
+ 初始化时的差异化配置，由RadioInitParams为统一入口，然后再分属不同的模块设置不同的参数
+
+
+

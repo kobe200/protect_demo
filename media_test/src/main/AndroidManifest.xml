@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.cookoo.mediatest">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions"/>
+    <uses-permission
+        android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions"/>
+
+    <application
+        android:name=".CarApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:launchMode="singleTask"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Light.NoTitleBar">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".music.ActivityMusic"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".video.ActivityVideo"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="start.video.play.action" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".image.ActivityImage"
+            android:launchMode="singleTask"/>
+
+        <service
+            android:name="com.cookoo.musicsdk.service.MusicSdkService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="carnetapp.music.musicsdk.musicservice"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.cookoo.videosdk.service.VideoSdkService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="carnetapp.video.videosdk.videoservice"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.cookoo.imagesdk.service.ImageSdkService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="carnetapp.image.imagesdk.imageservice"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:name="carnetapp.usbmediadata.model.MediaUsbService"/>
+    </application>
+
+</manifest>

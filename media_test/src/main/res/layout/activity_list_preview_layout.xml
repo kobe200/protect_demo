@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/activity_list_preview_layout_usb"
+        android:layout_width="150px"
+        android:layout_height="match_parent"
+        android:background="#55333333"
+        android:orientation="vertical"/>
+
+    <ListView
+        android:id="@+id/activity_list_preview_layout_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/activity_list_preview_layout_usb"
+        />
+
+</RelativeLayout>
